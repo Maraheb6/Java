@@ -1,0 +1,185 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+
+        //1
+        for(int i=1;i<=100;i++){
+            if((i % 3==0))
+                System.out.println("Fizz");
+            else if((i % 5==0))
+                System.out.println("Buzz");
+                else System.out.println("FizzBuzz");
+                 }
+
+
+        //2
+
+        String reversedStr="";
+        System.out.println("Input a String:");
+        String str=s.nextLine();
+        for(int i=0;i<str.length();i++){
+            reversedStr = str.charAt(i) + reversedStr;
+            }
+
+            System.out.println(reversedStr);
+
+
+        //3
+        System.out.print("input a positive integer:");
+        int pInteger=s.nextInt();
+        for (int i = 1; i <= 10; i++) {
+            System.out.println(pInteger + " * " + i + " = "
+                    + pInteger * i);
+        }
+
+
+        //4
+        int fact=1;
+        System.out.println("Input Number to find its factorial:");
+        int factorialNumber=s.nextInt();
+        for(int i=1;i<=factorialNumber;i++){
+            fact=fact*i;
+
+        System.out.println("Factorial of "+factorialNumber+" is: "+fact);}
+
+
+
+        //5
+        int power=1;
+
+         System.out.println("Enter Number1: ");
+         int N1=s.nextInt();
+        System.out.println("Enter Number2: ");
+        int N2=s.nextInt();
+        if(N1>=1){
+            for(int i=1;i<=N2;i++){
+                power*=N1;
+            }
+            System.out.println(power);
+
+        }
+
+
+
+        //6
+        int even=0;
+        int odd=0;
+
+        System.out.println("Input Positives Numbers or  -1 to Stop: ");
+        int Number=s.nextInt();
+
+        while (Number !=-1){
+            if(Number%2==0){
+                even+=Number;
+            }
+            else
+                odd+=Number;
+            System.out.println("Input Positives Numbers or -1 to Stop: ");
+             Number=s.nextInt();
+        }
+        System.out.println("Sum of Even Numbers is: "+even);
+        System.out.println("Sum of Odd Numbers is: "+odd);
+
+
+        //7
+         System.out.println("Input Number: ");
+        int number=s.nextInt();
+        boolean flag = false;
+        for(int i = 2; i <= number/2; ++i)
+        {
+            if(number % i == 0)
+            {
+                flag = true;
+                break;
+            }
+        }
+
+        if (!flag)
+            System.out.println(number + " is a prime number.");
+        else
+            System.out.println(number + " is not a prime number.");
+         
+
+
+        //8
+        int zero=0;
+        int postive=0;
+        int negative=0;
+        System.out.println("How many Numbers you want enter:");
+        int N=s.nextInt();
+        for(int i=1;i<=N;i++){
+            System.out.println("Input Number "+i +":");
+            int Number=s.nextInt();
+            if(Number>0)
+                ++postive;
+            else if (Number< 0)
+                ++ negative;
+            else
+                ++zero;
+
+        }
+        System.out.println("Zeroes Numbers: "+zero);
+        System.out.println("Postive Numbers: "+postive);
+        System.out.println("Negative Numbers:" +negative);
+
+
+
+        //9
+        for(int i=1;i<=4;i++){
+            System.out.println("Week"+i);
+            for(int j=1;j<=7;j++){
+                System.out.println("Day"+j);
+
+
+            }
+
+        }
+
+
+        //10
+
+
+        String rev="";
+        System.out.println("Enter a string:");
+        String str = s.nextLine();
+
+        for ( int i = str.length()- 1; i >= 0; i-- )
+            rev = rev + str.charAt(i);
+
+        if (str.equals(rev))
+            System.out.println(str+" is a palindrome");
+        else
+            System.out.println(str+" is not a palindrome")
+            ;
+         
+       
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }}
